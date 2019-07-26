@@ -1,4 +1,4 @@
-'.source.datalog':
+'.source.prolog':
   'Comment':
     'prefix': '%%'
     'body': '%% ${1:functor_name}(${2:arguments}) is ${3:mode}\n%\n%  ${4:comment}'

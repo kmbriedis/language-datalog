@@ -1,3 +1,9 @@
+# Datalog language support in Atom
+
+Based on Jakehp/language-prolog
+
+README of original:
+
 # Prolog language support in Atom
 
 Adds syntax highlighting and snippets to Prolog files in Atom.

@@ -1,0 +1,295 @@
+'fileTypes': [
+  'dl'
+]
+'firstLineMatch': '(:-|-->)'
+'name': 'Datalog'
+'patterns': [
+  {
+    'match': "\\b0'.\\b"
+    'name': 'constant.numeric.datalog'
+  }
+  {
+    'name': 'keyword.control.datalog'
+    'match': '^(\\.\\w+)'
+  }
+  {
+    'begin': '\''
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.datalog'
+    'end': '\''
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.datalog'
+    'name': 'string.quoted.single.datalog'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.datalog'
+      }
+      {
+        'match': '\'\''
+        'name': 'constant.character.escape.quote.datalog'
+      }
+    ]
+  }
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.datalog'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.datalog'
+    'name': 'string.quoted.double.datalog'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.datalog'
+      }
+      {
+        'match': '""'
+        'name': 'constant.character.escape.quote.datalog'
+      }
+    ]
+  }
+  {
+    'begin': '`'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.datalog'
+    'end': '`'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.datalog'
+    'name': 'string.quoted.other.datalog'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.datalog'
+      }
+      {
+        'match': '``'
+        'name': 'constant.character.escape.quote.datalog'
+      }
+    ]
+  }
+  {
+    'match': '\\b[a-z][a-zA-Z0-9_]*(?![(])\\b'
+    'name': 'string.unquoted.atom.datalog'
+  }
+  {
+    'begin': '/\\*'
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.datalog'
+    'end': '\\*/'
+    'name': 'comment.block.datalog'
+  }
+  {
+    'begin': '(^[ \\t]+)?(?=//)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.datalog'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': '//'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.datalog'
+        'end': '\\n'
+        'name': 'comment.line.percentage.datalog'
+      }
+    ]
+  }
+  {
+    'match': '(must_be)\\(\\s*([^, ]+)'
+    'captures':
+      '1': 'name': 'keyword.must_be.datalog'
+      '2': 'name': 'storage.type.datalog'
+  }
+  {
+    'match': ':-'
+    'name': 'keyword.operator.definition.datalog'
+  }
+  {
+    'match': '-->'
+    'name': 'keyword.operator.definition.datalog'
+  }
+  {
+    'match': '\\.'
+    'name': 'punctuation.separator.statement.datalog'
+  }
+  {
+    'match': ','
+    'name': 'punctuation.separator.and.datalog'
+  }
+  {
+    'match': ';'
+    'name': 'punctuation.separator.or.datalog'
+  }
+  {
+    'match': '!'
+    'name': 'support.constant.cut.datalog'
+  }
+  {
+    'match': 'true'
+    'name': 'support.constant.true.datalog'
+  }
+  {
+    'match': 'fail'
+    'name': 'support.constant.fail.datalog'
+  }
+  {
+    'match': 'nl'
+    'name': 'support.constant.newline.datalog'
+  }
+  {
+    'match': '\\b_\\b'
+    'name': 'support.constant.joker.datalog'
+  }
+  {
+    'match': '\\\\+'
+    'name': 'keyword.operator.not.datalog'
+  }
+  {
+    'match': '@<'
+    'name': 'keyword.operator.alphabeticalllt.datalog'
+  }
+  {
+    'match': '@=<'
+    'name': 'keyword.operator.alphabeticallyle.datalog'
+  }
+  {
+    'match': '@>='
+    'name': 'keyword.operator.alphabeticallyge.datalog'
+  }
+  {
+    'match': '@>'
+    'name': 'keyword.operator.alphabeticallygt.datalog'
+  }
+  {
+    'match': '\\\\=='
+    'name': 'keyword.operator.notidentical.datalog'
+  }
+  {
+    'match': '\\\\='
+    'name': 'keyword.operator.notequal.datalog'
+  }
+  {
+    'match': '=='
+    'name': 'keyword.operator.identical.datalog'
+  }
+  {
+    'match': '=:='
+    'name': 'keyword.operator.equalexpr.datalog'
+  }
+  {
+    'match': '=\\\\='
+    'name': 'keyword.operator.notequalexpr.datalog'
+  }
+  {
+    'match': '#='
+    'name': 'keyword.operator.sharpequal.datalog'
+  }
+  {
+    'match': '#=<'
+    'name': 'keyword.operator.sharple.datalog'
+  }
+  {
+    'match': '=<'
+    'name': 'keyword.operator.le.datalog'
+  }
+  {
+    'match': '#<'
+    'name': 'keyword.operator.sharplt.datalog'
+  }
+  {
+    'match': '<'
+    'name': 'keyword.operator.lt.datalog'
+  }
+  {
+    'match': '#>='
+    'name': 'keyword.operator.sharpge.datalog'
+  }
+  {
+    'match': '>='
+    'name': 'keyword.operator.ge.datalog'
+  }
+  {
+    'match': '#>'
+    'name': 'keyword.operator.sharpgt.datalog'
+  }
+  {
+    'match': '>'
+    'name': 'keyword.operator.gt.datalog'
+  }
+  {
+    'match': '='
+    'name': 'keyword.operator.unify.datalog'
+  }
+  {
+    'match': '\\s+(is)\\s+'
+    'captures':
+      '1': 'name': 'keyword.operator.is.datalog'
+  }
+  {
+    'match': '\\+'
+    'name': 'keyword.operator.plus.datalog'
+  }
+  {
+    'match': '-'
+    'name': 'keyword.operator.minus.datalog'
+  }
+  {
+    'match': '\\*'
+    'name': 'keyword.operator.times.datalog'
+  }
+  {
+    'match': '\\|'
+    'name': 'keyword.operator.cons.datalog'
+  }
+  {
+    'match': '\\b\\d+(\\.\\d+)?([eE][-+]?\\d+)?\\b'
+    'name': 'constant.numeric.datalog'
+  }
+  {
+    'match': '\\b0b[01]+\\b'
+    'name': 'constant.numeric.datalog'
+  }
+  {
+    'match': '\\b0o[0-7]+\\b'
+    'name': 'constant.numeric.datalog'
+  }
+  {
+    'match': '\\b0x[0-9a-fA-F]+\\b'
+    'name': 'constant.numeric.datalog'
+  }
+  {
+    'match': '\\bconsult\(\\w*\)\\b'
+    'name': 'keyword.control.consult.datalog'
+  }
+  {
+    'match': '\\b(call|once)\(\\w*\)\\b'
+    'name': 'keyword.control.call.datalog'
+  }
+  {
+    'match': '\\b(?:append|arg|bagof|findall|read|end_of_file|get_byte|get|flush_output|member|print|prin|tab|put|setof|forall|between|select|length)\(\\w*\)\\b'
+    'name': 'support.function.datalog'
+  }
+  {
+    'match': '\\b[A-Z][a-zA-Z0-9_]*\\b'
+    'name': 'variable.other.datalog'
+  }
+  {
+    'match': '\\b_[a-zA-Z0-9_]+\\b'
+    'name': 'variable.other.singleton.datalog'
+  }
+  {
+    'match': '\\b[a-z][a-zA-Z0-9_]*(?=[(])\\b'
+    'name': 'entity.name.function.declaration.datalog'
+  }
+]
+'scopeName': 'source.datalog'

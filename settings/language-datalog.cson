@@ -1,4 +1,4 @@
-'.source.prolog':
+'.source.datalog':
   'editor':
-    'commentStart': '% '
+    'commentStart': '// '
     'increaseIndentPattern': '(:-|-->|->)\\s*$'
